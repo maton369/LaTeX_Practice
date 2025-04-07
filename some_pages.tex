@@ -1,0 +1,55 @@
+\documentclass{report}
+\usepackage{xeCJK}
+\usepackage{tocloft}
+\setCJKmainfont{Hiragino Mincho ProN} % 日本語フォント（Mac用）
+
+\title{レポートタイトル}
+\author{山田太郎}
+\date{\today}
+
+\begin{document}
+\renewcommand{\cftchapfont}{\normalfont}
+\renewcommand{\cftchappagefont}{\normalfont}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+% 表紙
+\begin{titlepage}
+  \begin{center}
+    \vspace*{2cm}
+    {\LARGE ○○大学\\[0.5cm] 学部・学科名}\\[3cm]
+    {\Huge \bfseries レポートタイトル}\\[2cm]
+    {\Large 学籍番号：12345678}\\[0.3cm]
+    {\Large 氏名：山田太郎}\\[0.3cm]
+    {\Large 指導教員：○○教授}\\[4cm]
+    {\Large \today}
+    \vfill
+  \end{center}
+\end{titlepage}
+
+% 目次（章として追加）
+\chapter*{目次}
+% \chapter* で目次に表示されない章を表示させたい場合は以下の行を追加する
+\addcontentsline{toc}{chapter}{目次}
+\tableofcontents
+\vspace{1cm}
+\newpage
+
+% 以下本文
+\chapter{はじめに}
+ここには序論・背景などを書く。
+
+\chapter{方法}
+ここには実験・調査・手法などを書く。
+
+\chapter{結果}
+ここには結果・分析などを書く。
+
+\chapter{考察}
+ここには考察・議論などを書く。
+
+\chapter{結論}
+ここには結論や今後の課題を書く。
+
+% 注意: \chapter* を使用すると、その章は目次に自動的に追加されないため、必要に応じて \addcontentsline を使用して手動で追加する必要があります。
+
+\end{document}
