@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{report}
 \usepackage{graphicx}
 \usepackage{xeCJK}
 \usepackage{pgfplots}
@@ -7,6 +7,9 @@
 
 \begin{document}
 
+\chapter{レポートのタイトル}
+
+\section{画像}
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.7\textwidth]{Its_me.jpg}
@@ -14,6 +17,7 @@
   \label{fig:sample}
 \end{figure}
 
+\section{表}
 \begin{table}[htbp]
   \centering
   \caption{サンプル表}
@@ -29,6 +33,7 @@
   \label{tab:sample}
 \end{table}
 
+\section{二次関数のグラフ}
 \begin{figure}[htbp]
   \centering
   \begin{tikzpicture}
@@ -47,6 +52,7 @@
   \cite{einstein1905}
 \end{figure}
 
+\section{参考文献}
 \begin{thebibliography}{9}
   \bibitem{einstein1905}
   Albert Einstein,
