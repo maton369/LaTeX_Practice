@@ -1,0 +1,88 @@
+{
+  "[tex]": {
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.tabSize": 2
+  },
+
+  "[latex]": {
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.tabSize": 2
+  },
+
+  "[bibtex]": {
+    "editor.tabSize": 2
+  },
+
+  // ---------- LaTeX Workshop ----------
+
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.intellisense.package.directories": [
+    "./",
+    "./tex",
+    "./sections",
+    "./chapters"
+  ],
+  "latex-workshop.intellisense.unimathsymbols.enabled": true,
+  "latex-workshop.intellisense.command.enabled": true,
+  "latex-workshop.intellisense.environment.enabled": true,
+  "latex-workshop.intellisense.label.enabled": true,
+  "latex-workshop.intellisense.argument.enabled": true,
+
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.ist",
+    "*.fls",
+    "*.log",
+    "*.fdb_latexmk",
+    "*.snm",
+    "*.nav",
+    "*.dvi",
+    "*.synctex.gz"
+  ],
+
+  "latex-workshop.latex.clean.enabled": true,
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.autoClean.run": "onBuilt",
+  "latex-workshop.latex.outDir": "out",
+
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "xelatex",
+      "tools": ["xelatex"]
+    },
+    {
+      "name": "latexmk",
+      "tools": ["latexmk"]
+    }
+  ],
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": ["-pdf", "-silent", "-outdir=%OUTDIR%", "%DOC%"]
+    },
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "args": ["-interaction=nonstopmode", "-output-directory=out", "%DOC%"]
+    }
+  ],
+
+  "latex-workshop.formatting.latex": "latexindent",
+  "latex-workshop.formatting.latexindent.path": "/opt/homebrew/bin/latexindent"
+}
