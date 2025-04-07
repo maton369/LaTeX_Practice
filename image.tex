@@ -1,6 +1,8 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{xeCJK}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \setCJKmainfont{Hiragino Mincho ProN} % Macの日本語フォント
 
 \begin{document}
@@ -10,6 +12,38 @@
   \includegraphics[width=0.7\textwidth]{Its_me.jpg}
   \caption{サンプル画像}
   \label{fig:sample}
+\end{figure}
+
+\begin{table}[htbp]
+  \centering
+  \caption{サンプル表}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    項目 & 数値 & 備考   \\
+    \hline
+    A  & 10 & データA \\
+    B  & 20 & データB \\
+    C  & 30 & データC \\
+    \hline
+  \end{tabular}
+  \label{tab:sample}
+\end{table}
+
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        axis lines = middle,
+        xlabel = $x$, ylabel = $y$,
+        grid = both,
+        samples = 100,
+        width=10cm, height=6cm
+      ]
+      \addplot[domain=-5:5, thick] {x^2};
+    \end{axis}
+  \end{tikzpicture}
+  \caption{二次関数 $y = x^2$ のグラフ}
+  \label{fig:quadratic}
 \end{figure}
 
 \end{document}
